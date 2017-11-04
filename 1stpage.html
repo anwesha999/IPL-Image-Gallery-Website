@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<title>All Time Batting Leaders</title>
+</head>
+<body bgcolor="#F8F8FF"><center>
+<table>
+	<tr>
+	<td> <img src="E:\anwesha\Semes\html\ipl\2.jpg" width="40%"/></td>
+	<td><h1>All Time Record Batting Leaders</td></h1>
+	</tr>
+	
+	
+	<tr>
+		
+		<td><u><h2 id="name"></u></h2></td>
+		<td><img src="E:\anwesha\Semes\html\ipl\Suresh-Raina.jpg" width="25%"/></td>
+			
+	</tr>
+	
+	<tr>
+		<td><u><h2 id="fname"></u></h2></td>
+		<td><img src="E:\anwesha\Semes\html\ipl\Chris-Gayle.jpg" width="25%"/></td>
+	</tr>
+	
+	<tr>
+		<td><u><h2 id="DOB"></u></h2></td>
+		<td><img src="E:\anwesha\Semes\html\ipl\Chris-Gayle.jpg" width="25%"/></td>
+	</tr>
+	
+	
+	<tr>
+		<td><u><h2 id="Add"></u></h2></td>
+		<td><img src="E:\anwesha\Semes\html\ipl\and.jpg" width="25%"/></td>
+	</tr>
+	
+	
+</table>
+</center>
+<script>
+var parser, xmlDoc;
+var text = 
+"<info>"+
+	"<name>Orange Cap [Suresh Raina]  GL  (4540 RUNS)</name>"+
+	"<fathersname>Most Sixes [Chris Gayle]  RCB  (265 SIXES)</fathersname>"+
+	"<dateofbirth>Highest Score [Chris Gayle]  RCB  (175*)</dateofbirth>"+
+	"<address>Best Batting Strike Rate [Andre Russell]  KKR  (173.41)</address>"+
+	"</info><info>"+
+	"<name>Suresh Raina (4540 RUNS)</name>"+
+	"<fathersname>Chris Gayle (265 SIXES)</fathersname1>"+
+	"<dateofbirth>Chris Gayle (175*)</dateofbirth>"+
+	"<address>Andrew Russell (173.41)</address>"+
+"</info>";
+
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(text,"text/xml");
+
+document.getElementById("name").innerHTML =
+xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+document.getElementById("fname").innerHTML =
+xmlDoc.getElementsByTagName("fathersname")[0].childNodes[0].nodeValue;
+document.getElementById("DOB").innerHTML =
+xmlDoc.getElementsByTagName("dateofbirth")[0].childNodes[0].nodeValue;
+document.getElementById("Add").innerHTML =
+xmlDoc.getElementsByTagName("address")[0].childNodes[0].nodeValue;
+document.getElementById("Cno").innerHTML =
+xmlDoc.getElementsByTagName("contactinformation")[0].childNodes[0].nodeValue;
+
+</script>
+<form><center>
+<input type = "submit" formaction="2page.html" value = "NEXT" ></center></form>
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!--<link rel="stylesheet" type="test/css" href="file:///E:/anwesha/Semes/html/ipl/c.css">
+<script type="text/javascript" src="file:///E:/anwesha/Semes/html/ipl/b.js"></script></head>
+<link rel="stylesheet" type="text/css" href="file:///E:/anwesha/Semes/html/ipl/gallery.css">
+<link rel="stylesheet" type="text/css" href="file:///E:/anwesha/Semes/html/ipl/ipl1.css">
+<script src="file:///E:/anwesha/Semes/html/ipl/gallery.js"></script>-->
+<link rel="stylesheet" type="text/css" href="E:\anwesha\Semes\html\ipl\ipl1.css">
+</head>   <body>
+<div id="header">
+<ul id="navbar">
+<li><a href="E:/anwesha/Semes/html/ipl/ipl2.html">Home</a>
+</li><li><a href="E:/anwesha/Semes/html/ipl/ipl1.html">About</a></li>
+<li><a href="E:/anwesha/Semes/html/ipl/1stpage.html">All Time Batting Leaders</a></li>
+<li><a href="E:/anwesha/Semes/html/ipl/2page.html">All Time Bowling Leaders</a></li>
+<li><a href="E:/anwesha/Semes/html/ipl/gallery.html">Winning Records</a></li>
+</ul>
+</div>
+
+<div id="container" style="text-align:center">
+<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+    IPL Season Winners</div>
+<img id="2008" class="mySlides" src="E:\anwesha\Semes\html\ipl\r2008.jpg" />
+
+<img id="2009" class="mySlides" src="E:\anwesha\Semes\html\ipl\DeccanCharges2009.jpg" />
+
+<img id="2010" class="mySlides" src="E:\anwesha\Semes\html\ipl\2010ipl.jpg" />
+<img id="2011" class="mySlides" src="E:\anwesha\Semes\html\ipl\ChennaiSuperKings2011.jpg"/>
+<img id="2012" class="mySlides" src="E:\anwesha\Semes\html\ipl\ipl-winners-2012.jpg"/>
+<img id="2013" class="mySlides" src="E:\anwesha\Semes\html\ipl\Mumbai-indians-wins-2013.jpg.jpg"/>
+<img id="2014" class="mySlides" src="E:\anwesha\Semes\html\ipl\2014ipl.jpg"/>
+<img id="2015" class="mySlides" src="E:\anwesha\Semes\html\ipl\mumbai_indians2015.jpg"/>
+<img id="2016" class="mySlides" src="E:\anwesha\Semes\html\ipl\sunrisers hyderabad 2016.jpg"/>
+<img id="2017" class="mySlides" src="E:\anwesha\Semes\html\ipl\mumbaiindians2017.jpg"/>
+<img class="mySlides" src="E:\anwesha\Semes\html\ipl\allseasonwinners.jpg"/>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button></style>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(+1)">&#10095;</button></style>
+</div>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>

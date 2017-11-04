@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<title>All Time Batting Leaders</title>
+</head>
+<body bgcolor="#F8F8FF"><center>
+<table>
+	<tr>
+	<td> <img src="E:\anwesha\Semes\html\ipl\trophy.jpg" width="40%"/></td>
+	<td><h1>All Time Record Batting Leaders</td></h1>
+	</tr>
+	
+	
+	<tr>
+		
+		<td><u><h2 id="name"></u></h2></td>
+		<td><img src="E:\anwesha\Semes\html\ipl\malinga.jpg" width="25%"/></td>
+			
+	</tr>
+	
+	<tr>
+		<td><u><h2 id="fname"></u></h2></td>
+		<td><img src="E:\anwesha\Semes\html\ipl\sohail tanveer2.jpg" width="25%"/></td>
+	</tr>
+	
+	<tr>
+		<td><u><h2 id="DOB"></u></h2></td>
+		<td><img src="E:\anwesha\Semes\html\ipl\dougbollinger.jpg" width="25%"/></td>
+	</tr>
+	
+	
+	<tr>
+		<td><u><h2 id="Add"></u></h2></td>
+		<td><img src="E:\anwesha\Semes\html\ipl\sunil-narine.jpg" width="25%"/></td>
+	</tr>
+	
+	
+</table>
+</center>
+<script>
+var parser, xmlDoc;
+var text = 
+"<info>"+
+	"<name>Purple Cap [Lasith Malinga]  MI  (154 WICKETS)</name>"+
+	"<fathersname>Best Bowling Figure[Sohail Tanvir]  RR  (6/14)</fathersname>"+
+	"<dateofbirth>Best Bowling Average[Doug Bollinger]  CSK  (18.72)</dateofbirth>"+
+	"<address>Best Economy[Sunil Narine]  KKR  (6.32)</address>"+
+	"</info><info>"+
+	"<name>Suresh Raina (4540 RUNS)</name>"+
+	"<fathersname>Chris Gayle (265 SIXES)</fathersname1>"+
+	"<dateofbirth>Chris Gayle (175*)</dateofbirth>"+
+	"<address>Andrew Russell (173.41)</address>"+
+"</info>";
+
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(text,"text/xml");
+
+document.getElementById("name").innerHTML =
+xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+document.getElementById("fname").innerHTML =
+xmlDoc.getElementsByTagName("fathersname")[0].childNodes[0].nodeValue;
+document.getElementById("DOB").innerHTML =
+xmlDoc.getElementsByTagName("dateofbirth")[0].childNodes[0].nodeValue;
+document.getElementById("Add").innerHTML =
+xmlDoc.getElementsByTagName("address")[0].childNodes[0].nodeValue;
+document.getElementById("Cno").innerHTML =
+xmlDoc.getElementsByTagName("contactinformation")[0].childNodes[0].nodeValue;
+
+</script>
+<form><center>
+<input type = "submit" formaction="1stpage.html" value = "NEXT" ></center></form>
+</body>
+</html>

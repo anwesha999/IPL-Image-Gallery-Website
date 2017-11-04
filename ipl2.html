@@ -1,0 +1,51 @@
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title>Indian Premier League- Responsive HTML CSS Template</title>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" type="text/css" href="E:\anwesha\Semes\html\ipl\ipl1.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+</head>   <body background="E:\anwesha\Semes\html\ipl\12.jpg ">
+<div id="header">
+<ul id="navbar">
+<li><a href="E:/anwesha/Semes/html/ipl/ipl2.html">Home</a>
+</li><li><a href="E:/anwesha/Semes/html/ipl/ipl1.html">About</a></li>
+<li><a href="E:/anwesha/Semes/html/ipl/1stpage.html">All Time Batting Leaders</a></li>
+<li><a href="E:/anwesha/Semes/html/ipl/2page.html">All Time Bowling Leaders</a></li>
+<li><a href="E:/anwesha/Semes/html/ipl/a.html">Winning Records</a></li>
+</ul>
+</div>
+
+
+<div id="container">
+<img class="mySlides" src="E:\anwesha\Semes\html\ipl\1.jpg" width=100%/>
+<img id="2008" class="mySlides" src="E:\anwesha\Semes\html\ipl\2.jpg" width=100%/>
+<img id="2009" class="mySlides" src="E:\anwesha\Semes\html\ipl\3.jpg" width=100%/>
+<img id="2010" class="mySlides" src="E:\anwesha\Semes\html\ipl\4.jpg" width=100% />
+<img id="2011" class="mySlides" src="E:\anwesha\Semes\html\ipl\5.jpg" width=100%/>
+
+
+<button class="btn" onclick="plusDivs(-1)">&#10094;</button>
+<button class="btn" onclick="plusDivs(+1)">&#10095;</button></span>
+</div>
+
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>
